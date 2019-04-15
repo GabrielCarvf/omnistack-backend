@@ -13,13 +13,13 @@ const io = require('socket.io')(server);
 io.on('connection', socket => {
     socket.on('connectRoom', box => {
         socket.join(box);
-    })
-})
+    });
+});
 
 mongoose.connect(
     'mongodb+srv://Gabriel:Gabriel@cluster0-rvbg6.mongodb.net/test?retryWrites=true', 
     {
-        useNewUrkParser: true
+        useNewUrlParser: true
     }
 );
 
